@@ -4,7 +4,8 @@
     *** Conferir se esta instalado o npx:
         ** npm -v
 
-### Como rodar o projeto baixado:
+### Instalar todas as dependencias indicadas pelo package.json:
+    *** npm install
 
 ### Sequencia para criar o projeto:
     *** Criar o projeto com React e Next.js:
@@ -18,6 +19,8 @@
     *** http://localhost:3000/
     *** http://localhost:3001/
     *** http://localhost:5173/
+
+
 
 
 
