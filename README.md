@@ -1,25 +1,27 @@
-### Requisitos
-    *** Conferir a versao do Node.js ou superior
-        ** node -v
-    *** Conferir se esta instalado o npx:
-        ** npm -v
+### Requirements
+   *** Check the version of Node.js or higher
+      ** node -v
+   *** Check if npx is installed:
+      ** npm -v
 
+<<<<<<< HEAD
 ### Instalar todas as dependencias indicadas pelo package.json:
     *** npm install
+=======
+### How to run the downloaded project:
+>>>>>>> 3bc5321a4445b64b17d89fc1cc42bf460295c43a
 
-### Sequencia para criar o projeto:
-    *** Criar o projeto com React e Next.js:
-        ** npm create-next-app@latest . (O ponto '.' indica que o projeto sera criado no propriodiretorio).
+### Sequence to create the project:
+   *** Create the project with React and Next.js:
+      ** npm create-next-app@latest . (The '.' indicates that the project will be created in the same directory).
 
-### Rodar o projeto React:
-    *** npm run dev
+### Run the React project:
+   *** npm run dev
 
-
-### Acessar no navegador a URL:
-    *** http://localhost:3000/
-    *** http://localhost:3001/
-    *** http://localhost:5173/
-
+### Access the URL in the browser:
+   *** http://localhost:3000/
+   *** http://localhost:3001/
+   *** http://localhost:5173/
 
 
 
