@@ -1,8 +1,13 @@
+import Menu from "@/components/Menu";
+import Footer from "@/components/Footer";
+
 const Contact = () => {
     return (
-        <>
-            <h2>Contact</h2>
-        </>
+        <main>
+            <Menu />
+            <h2>Contato Celke!</h2>
+            <Footer/>
+        </main>
     );
 }
 

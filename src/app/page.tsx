@@ -1,9 +1,13 @@
 //import Image from "next/image";
+import Menu from "@/components/Menu";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
-    <main>
-      <h2>Bem vindo, Fernando!</h2>
+    <main>      
+      <Menu />
+      <h2>Bem vindo, Celke!</h2>
+      <Footer/>
     </main>
   );
 }
