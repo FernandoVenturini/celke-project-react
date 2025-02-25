@@ -4,16 +4,47 @@
 'use client';
 
 import User from "@/components/User";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Home = () => {
 
+  // Hook - useState
   const [nameUser, setNameUser] = useState('Cesar');
+
+   // Hook - useEffect
+  const [productId, setProductId] = useState();
+  const [productName, setProductName] = useState();
+  const [productPrice, setProductPrice] = useState();
+  const [dataProduct, setDataProduct] = useState({
+    name: 'curso de ...',
+    price: 0,
+  });
+
+  function searchProduct() {
+    console.log('Buscar produto!');
+    setProductId(7);
+    setProductName('Curso de React');
+    setProductPrice(947);
+    setDataProduct({
+      name: "Curso de  Node.js",
+      price: 847,
+    })
+  }
+
+  useEffect(() => {
+    searchProduct();
+  }, [productId]);
 
   const userName = 'Cesar';
 
   return (
     <main>      
+      <p >ID do produto: {productId}</p>
+      <p >Nome do produto: {productName}</p>
+      <p >Preco do produto: {productPrice}</p>
+      <p>Nome: {dataProduct.name}</p>
+      <p>Nome: {dataProduct.price}</p>
+      
       <p>Nome: {nameUser}</p>
       <button onClick={() => setNameUser('Fernando!')}>Alterar nome</button>
 
