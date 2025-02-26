@@ -3,11 +3,41 @@
 // import Footer from "@/components/Footer";
 'use client';
 
-import User from "@/components/User";
-import { useEffect, useState } from "react";
+//import User from "@/components/User";
+import React, { useState } from "react";
+import './home.css';
 
 const Home = () => {
 
+  // Declarar uma nova varivel dados com state e atribuir o objeto:
+  const [data, setData] = useState({
+    nameUser: '',
+    emailUser: ''
+  });
+
+  // Receber os dados dos campos do formualrio:
+  const valueInput = (e: React.ChangeEvent<HTMLInputElement>) => setData({
+    ...data, [e.target.name]: e.target.value
+  });
+
+  //Executar a funcao quando o usuario clicar no botao do formulario:
+  const addUSer = (e: React.FormEvent<HTMLInputElement>) => {
+    // Bloquear o recarregamento da pagina:
+    e.preventDefault();
+
+    console.log('Processar o form');
+
+    // Manipular os dados recebidos, por exemplo, enviar os dados para a API:
+    // Concatenar e imprimir utilizando +:
+    // console.log('Nome: ' + data.nameUser);
+    // console.log('Email: ' + data.emailUser);
+
+    // Concatenar e imprimir utilizando Template Strings:
+    console.log(`Nome: ${data.nameUser}`);
+    console.log(`E-mail: ${data.emailUser}`);
+  }
+
+  {/*
   // Hook - useState
   const [nameUser, setNameUser] = useState('Cesar');
 
@@ -36,15 +66,34 @@ const Home = () => {
   }, [productId]);
 
   const userName = 'Cesar';
+  */}
 
   return (
-    <main>      
+    <main className="main-container">
+      <form onSubmit={addUSer} className="form-container">
+        <h1>Cadastrar Usuario</h1>
+
+        <div className="form-group">
+          <label htmlFor="nameUser">Nome</label>
+          <input type="text" name="nameUser" id="nameUser" placeholder="Nome do cliente" onChange={valueInput} />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="emailUser">Email</label>
+          <input type="email" name="emailUser" id="emailUser" placeholder="Email do cliente" onChange={valueInput} />
+        </div>
+
+        <button type="submit" className="btn-submit">Cadastrar</button>
+      </form>
+
+
+      {/*
       <p >ID do produto: {productId}</p>
       <p >Nome do produto: {productName}</p>
       <p >Preco do produto: {productPrice}</p>
       <p>Nome: {dataProduct.name}</p>
       <p>Nome: {dataProduct.price}</p>
-      
+
       <p>Nome: {nameUser}</p>
       <button onClick={() => setNameUser('Fernando!')}>Alterar nome</button>
 
@@ -52,6 +101,7 @@ const Home = () => {
         <p>Este e um comentario extra fornecido como children.</p>
       </User>
       <h2>Bem vindo, Celke!</h2>
+      */}
     </main>
   );
 }
