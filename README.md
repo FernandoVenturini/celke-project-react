@@ -47,3 +47,37 @@
 
 ### Como rodar o projeto baixado
    *** node dist/index.js
+
+### Como enviar e baixar os arquivos do Github
+   *** Baixar os arquivos do git
+      ** git clone -b (nome da branch) (nome do repositorio url)
+
+### Verificar em qual branch esta
+   *** git branch
+
+### Troque para a branch desejada:
+   *** git checkout <nome-da-branch>
+
+### Verifique as branches remotas:
+   *** git branch -r (Isso listará todas as branches remotas do seu repositório.)
+
+### Buscando as branches remotas:
+   *** git fetch (Isso atualizará as informações sobre as branches remotas.)
+   *** Agora, execute git branch -r novamente para verificar se a branch "origin/development" está atualizada.
+
+### Crie uma branch local a partir da branch remota:
+   *** Após buscar as branches remotas, você pode criar uma branch local chamada "nome da branch" a partir da branch remota "origin/nome da branch".
+   *** Execute o comando git checkout -b nome da branch origin/nome da branch no terminal.
+   *** Isso criará uma nova branch local chamada "nome da branch" e a configurará para rastrear a branch remota "origin/nome da branch".
+
+### Baixar as atualizacoes do Github
+   *** git pull
+
+### Adicionar todos os arquivos modificados no staging area - area de preparacao.
+   *** git add .
+
+### Fazer Commit
+   *** git commit -m "mensagem do commit aqui"
+
+### Enviar os commits locais para um repositorio remoto
+   *** git push origin -u (nome da branch)
