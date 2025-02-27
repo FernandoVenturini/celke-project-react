@@ -21,7 +21,7 @@ const Home = () => {
   });
 
   //Executar a funcao quando o usuario clicar no botao do formulario:
-  const addUSer = (e: React.FormEvent<HTMLInputElement>) => {
+  const addUSer = (e: React.FormEvent<HTMLFormElement>) => {
     // Bloquear o recarregamento da pagina:
     e.preventDefault();
 

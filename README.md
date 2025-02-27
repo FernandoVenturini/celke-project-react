@@ -44,3 +44,6 @@
 
 ### Executar o arquivo gerado com Node.js:
    *** node dist/index.js
+
+### Como rodar o projeto baixado
+   *** node dist/index.js
