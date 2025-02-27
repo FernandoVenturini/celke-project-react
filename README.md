@@ -81,3 +81,9 @@
 
 ### Enviar os commits locais para um repositorio remoto
    *** git push origin -u (nome da branch)
+
+### Enviando o codigo atualizado para o github pelo vscode
+   *** Clica no icone do git
+   *** Clica no +
+   *** Escreve a msg de commit
+   *** Commit & push
