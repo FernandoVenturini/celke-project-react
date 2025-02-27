@@ -23,6 +23,24 @@
    *** http://localhost:3001/
    *** http://localhost:5173/
 
+### Node.js - Sequencia para criar o projeto:
+   *** npm init -y
 
+### Instalando o Express para gerenciar as requisicoes, rotas, URLs, entre outras funcionalidades:
+   *** npm i express
 
+### Instalar os pacotes para suporte ao TypeScript:
+   *** npm i --save-dev @types/express
+   *** npm i --save-dev @types/node
 
+### Instalar o compilador projeto com TypeScript e reiniciar o projeto quando o arquivo e modificado:
+   *** npm i --save-dev ts-node
+
+### Gerar o arquivo de configuracao para o TypeScript:
+   *** npx tsc --init
+
+### Compilar o arquivo Typecript:
+   *** npx tsc
+
+### Executar o arquivo gerado com Node.js:
+   *** node dist/index.js
