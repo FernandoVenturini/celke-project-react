@@ -107,3 +107,7 @@
 
 *** git push origin -u (branch name)
 >>>>>>> 8c51f38d854d6fb3d4b23916af9bb230853bef93
+
+### Como instalar nodemon
+   *** npm install -g nodemon
+   
