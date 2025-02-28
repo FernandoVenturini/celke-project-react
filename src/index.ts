@@ -1,15 +1,17 @@
-// Importando a biblioteca Express:
-import express, {Request, Response} from 'express';
+// IMPORTA A BIBLIOTECA EXPRESS:
+import express from 'express';
 
-// Criando aplicacao Express:
-const app = express();
+// CRIA A APLICACAO EXPRESS:
+const app = express(); 
 
-// Definindo rota raiz: Criando a rota GET
-app.get('/', (req:Request, res:Response) => {
-    res.send('Bem vindo, Celke!');
-})
+// INCLUI(importa o login) OS CONTROLLERS:
+import login from './controllers/login';
 
-// Iniciando o servidor:
+// CRIAR AS ROTAS:
+app.use('/', login);
+
+
+// INICIA O SERVIDOR:
 app.listen(3000, () => {
-    console.log('Server is running on port 8080');
+    console.log('Server is running on port 3000');
 });
