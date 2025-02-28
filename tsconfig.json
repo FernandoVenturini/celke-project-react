@@ -31,7 +31,14 @@
     }
   },
   "include": [
+<<<<<<< HEAD
     "next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"
+=======
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".next/types/**/*.ts"
+>>>>>>> 31b885e37694eedf6645d36ba5ae25d5cc9c5c6d
   ], // Linha corrigida
   "exclude": [
     "node_modules"
