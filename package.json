@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "build-and-run": "npm run build && npm run start",
     "lint": "next lint"
   },
   "dependencies": {
