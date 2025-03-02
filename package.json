@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon server.js",
     "build": "tsc",
     "start": "node dist/index.js",
     "build-and-run": "npm run build && npm run start",
@@ -16,6 +16,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "type": "module",
     "@eslint/eslintrc": "^3",
     "@types/express": "^5.0.0",
     "@types/node": "^20.17.19",
