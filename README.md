@@ -115,3 +115,15 @@
 
 ### Instalando MySQL
    *** 
+
+### Instalar a dependenci para conectar o Node.js (TypeScript) com banco de dados.
+   *** npm nstall typeorm --save
+
+### Bibliotecas utilizada no TypeScript para adicionar metadados (informcoes adicionais) a classes.
+   *** npm install relect-metadata --save
+
+### Iniciar o MySQL instalado no sistema operacional com PowerShell:
+   *** net start mysql(versao do mysql)
+
+### Digita esse comando no terminal, ea cessa o mysql
+   *** mysql -h localhost -u root -p
