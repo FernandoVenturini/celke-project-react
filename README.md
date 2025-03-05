@@ -127,3 +127,5 @@
 
 ### Digita esse comando no terminal, ea cessa o mysql
    *** mysql -h localhost -u root -p
+
+### Conectando API com banco de dados  
