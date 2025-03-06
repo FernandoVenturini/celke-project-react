@@ -113,11 +113,14 @@
 ### Rodando o nodemon:
    *** npm run dev
 
+### COMANDO SQL PARA CRIAR A BASE DE DADOS:
+   *** CREATE DATABASE celke CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 ### Instalando MySQL
    *** 
 
 ### Instalar a dependenci para conectar o Node.js (TypeScript) com banco de dados.
-   *** npm nstall typeorm --save
+   *** npm install typeorm --save
 
 ### Bibliotecas utilizada no TypeScript para adicionar metadados (informcoes adicionais) a classes.
    *** npm install relect-metadata --save
@@ -128,4 +131,5 @@
 ### Digita esse comando no terminal, ea cessa o mysql
    *** mysql -h localhost -u root -p
 
-### Conectando API com banco de dados  
+### Instalar o drive do banco de dados MySQL
+   *** npm install mysql2 --save
