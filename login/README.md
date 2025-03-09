@@ -9,3 +9,7 @@
 
 ### Instala todas as dependencias indicada pelo package.json:
     *** npm install
+
+### Gerenciar rotas: www.reactrouterdom.com
+    *** npm install react-router-dom
+
