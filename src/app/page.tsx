@@ -4,8 +4,9 @@
 'use client';
 
 //import User from "@/components/User";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './home.css';
+import User from "@/components/User";
 
 const Home = () => {
 
@@ -37,36 +38,36 @@ const Home = () => {
     console.log(`E-mail: ${data.emailUser}`);
   }
 
-  {/*
+  
   // Hook - useState
   const [nameUser, setNameUser] = useState('Cesar');
 
    // Hook - useEffect
-  const [productId, setProductId] = useState();
-  const [productName, setProductName] = useState();
-  const [productPrice, setProductPrice] = useState();
-  const [dataProduct, setDataProduct] = useState({
-    name: 'curso de ...',
-    price: 0,
-  });
+  // const [productId, setProductId] = useState();
+  // const [productName, setProductName] = useState();
+  // const [productPrice, setProductPrice] = useState();
+  // const [dataProduct, setDataProduct] = useState({
+  //   name: 'curso de ...',
+  //   price: 0,
+  // });
 
-  function searchProduct() {
-    console.log('Buscar produto!');
-    setProductId(7);
-    setProductName('Curso de React');
-    setProductPrice(947);
-    setDataProduct({
-      name: "Curso de  Node.js",
-      price: 847,
-    })
-  }
+  // function searchProduct() {
+  //   console.log('Buscar produto!');
+  //   setProductId(7);
+  //   setProductName('Curso de React');
+  //   setProductPrice(947);
+  //   setDataProduct({
+  //     name: "Curso de  Node.js",
+  //     price: 847,
+  //   })
+  // }
 
-  useEffect(() => {
-    searchProduct();
-  }, [productId]);
+  // useEffect(() => {
+  //   searchProduct();
+  // }, [productId]);
 
   const userName = 'Cesar';
-  */}
+  
 
   return (
     <main className="main-container">
@@ -93,6 +94,7 @@ const Home = () => {
       <p >Preco do produto: {productPrice}</p>
       <p>Nome: {dataProduct.name}</p>
       <p>Nome: {dataProduct.price}</p>
+      */}
 
       <p>Nome: {nameUser}</p>
       <button onClick={() => setNameUser('Fernando!')}>Alterar nome</button>
@@ -101,7 +103,7 @@ const Home = () => {
         <p>Este e um comentario extra fornecido como children.</p>
       </User>
       <h2>Bem vindo, Celke!</h2>
-      */}
+      
     </main>
   );
 }
