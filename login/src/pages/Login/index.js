@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+// IMPORTANDO CONFIGAPI:
+import api from '../../config/configApi';
+
 export const Login = () => {
 
     // USANDO USESTATE PARA RECEBER O QUE FOR DIGITADO NOS INPUTS:
@@ -13,7 +16,19 @@ export const Login = () => {
 
     const loginSubmit = async e => {
         e.preventDefault();
-        console.log(user.email);
+        //console.log(user.email);
+
+        const headers = {
+            'Content-Type': 'application/json'
+        }
+
+        //FAZENDO A CONEXAO COM API:
+        await api.post('/login', user, {headers})
+        .then((Response) => {
+            console.log(response);
+        }).catch((err) => {
+            console.log('Erro: tente mais tarde!');
+        });
     }
 
     return (
@@ -21,10 +36,10 @@ export const Login = () => {
             <h1>Login</h1>
             <form onSubmit={loginSubmit}>
                 <label>Usuario: </label>
-                <input type='text' name='email' placeholder='Digite o e-mail...' onChange={valorInput}/>
+                <input type='text' name='email' placeholder='Digite o e-mail...' onChange={valorInput}/><br/><br/>
 
                 <label>Senha: </label>
-                <input type='password' name='password' placeholder='Digite a senha...' onChange={valorInput}/>
+                <input type='password' name='password' placeholder='Digite a senha...' onChange={valorInput}/><br/><br/>
 
                 <button type='submit'>Acessar</button>
             </form>

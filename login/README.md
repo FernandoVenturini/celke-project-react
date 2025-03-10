@@ -13,3 +13,5 @@
 ### Gerenciar rotas: www.reactrouterdom.com
     *** npm install react-router-dom
 
+### Realizar chamada da API:
+    *** npm install --save axios
