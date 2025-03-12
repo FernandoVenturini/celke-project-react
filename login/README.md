@@ -1,17 +1,11 @@
-### Criando projeto React:
+### CRIANDO O PROJETO REACT
     *** npx create-react-app (nome do projeto)
 
-### Acessar a pasta do projeto
+### ACESSAR O DIRETORIO DO PROJETO:
     *** cd (nome do projeto)
 
-### Rodando o projeto
-    *** npm start
-
-### Instala todas as dependencias indicada pelo package.json:
+### INSTALAR TODAS AS DEPENDENCIAS INDICADA PELO package.json:
     *** npm install
 
-### Gerenciar rotas: www.reactrouterdom.com
-    *** npm install react-router-dom
-
-### Realizar chamada da API:
-    *** npm install --save axios
+### RODAR O PROJETO:
+    *** npm start
