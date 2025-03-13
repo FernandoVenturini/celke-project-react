@@ -12,7 +12,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path='/login' component={Login} />
+          <Route path='/' component={Login} />
           <h1>Bem vindo Celke!</h1>
         </Switch>
       </Router>
