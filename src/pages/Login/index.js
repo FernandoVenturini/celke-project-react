@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// IMPORTANDO CONFIGAPI
+import api from '../../config/configApi';
+
 export const Login = () => {
 
     // VARIAVEIS PARA SALVAR OS VALORES DIGITADO NOS INPUTS
@@ -14,8 +17,19 @@ export const Login = () => {
     // ENVIANDO O FORMULARIO
     const loginSubmit = async (e) => {
         e.preventDefault(); // PREVINE O CARREGAMENTO DA PAGINA
-        console.log(user.email);
-        console.log(user.password);
+        // console.log(user.email);
+        // console.log(user.password);
+
+        const headers = {
+            'Content-Type': 'application/json'
+        }
+
+        await api.post('/login', user, {headers})
+        .then((respponse) => {
+            console.log(respponse);
+        }).catch((err) => {
+            console.log('Erro: tente mais tarde!');
+        })
     }
 
     return (

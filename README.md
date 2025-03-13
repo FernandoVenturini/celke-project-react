@@ -12,3 +12,8 @@
 
 ### CRIAR E GERENCIAR AS ROTAS:
     *** npm install react-router-dom
+
+### REALIZAR CHAMADA COM API
+    *** npm install --save axios
+
+### 
