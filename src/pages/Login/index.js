@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 // IMPORTANDO FUNCAO DO REACT-ROUTER-DOM
 import { useHistory } from 'react-router-dom';
@@ -6,9 +6,14 @@ import { useHistory } from 'react-router-dom';
 // IMPORTANDO CONFIGAPI
 import api from '../../config/configApi';
 
+// IMPORTANDO CONTEXT
+import { Context } from "../../Context/AuthContext";
+
 export const Login = () => {
 
     const history = useHistory();
+
+    const { authenticated, signIn } = useContext(Context);
 
     // VARIAVEIS PARA SALVAR OS VALORES DIGITADO NOS INPUTS
     const [user, setUser] = useState({
@@ -47,10 +52,15 @@ export const Login = () => {
                 mensagem: response.data.mensagem,*/
                 loading: false
             });
+
             // SALVANDO OS DADOS NO LOCALSTORAGE
-            localStorage.setItem('token', JSON.stringify(response.data.token))
+            localStorage.setItem('token', response.data.token);
+
+            signIn(true);
+
             // REDIRECIONANDO USUARIO PARA A PAGINA DASHBOARD APOS FAZER LOGIN
             return history.push('/dashboard');
+
         }).catch((err) => {
             if(err.response) {
                 //console.log(err.response);

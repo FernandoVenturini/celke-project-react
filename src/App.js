@@ -2,22 +2,23 @@
 import React from 'react';
 
 // IMPORTANDO REACT-ROUTER-DOM
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Router } from "react-router-dom";
 
-// IMPORTANDO LOGIN
-import { Login } from './pages/Login';
-import { Dashboard } from './pages/Dashboard';
+import Routes from './routes/routesAdm';
+
+import history from './services/history';
+
+// IMPORTANDO AUTHPROVIDER
+import { AuthProvider } from './Context/AuthContext'
 
 function App() {
   return (
     <>
-      <Router>
-        <Switch>
-          <Route exact path='/' component={Login} />
-          <Route path='/dashboard' component={Dashboard} />
-          <h1>Bem vindo Celke!</h1>
-        </Switch>
-      </Router>
+      <AuthProvider>
+        <Router history={history}>
+          <Routes/>
+        </Router>
+      </AuthProvider>
     </>
   );
 }

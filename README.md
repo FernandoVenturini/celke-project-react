@@ -16,4 +16,5 @@
 ### REALIZAR CHAMADA COM API
     *** npm install --save axios
 
-### 
+### Utilizado para mudar de pagina e renderizar a nova pagina sem recarregar toda aplicacao
+    *** npm install --save history
