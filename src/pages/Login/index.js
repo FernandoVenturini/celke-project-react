@@ -47,6 +47,8 @@ export const Login = () => {
                 mensagem: response.data.mensagem,*/
                 loading: false
             });
+            // SALVANDO OS DADOS NO LOCALSTORAGE
+            localStorage.setItem('token', JSON.stringify(response.data.token))
             // REDIRECIONANDO USUARIO PARA A PAGINA DASHBOARD APOS FAZER LOGIN
             return history.push('/dashboard');
         }).catch((err) => {
@@ -92,6 +94,7 @@ export const Login = () => {
                     name="password"
                     placeholder="Digite a senha..."
                     onChange={valorInput}
+                    autoComplete="on"
                 /><br /><br />                
 
                 {status.loading ? <button type="submit" disabled>Acessando...</button> : <button type="submit">Acessar...</button>}
