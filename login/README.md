@@ -9,3 +9,6 @@
 
 ### RODAR O PROJETO:
     *** npm start
+
+### CRIAR E GERENCIAR AS ROTAS:
+    *** npm install react-router-dom
