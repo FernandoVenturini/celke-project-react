@@ -6,6 +6,7 @@ import {Context} from '../Context/AuthContext';
 import {Login} from '../pages/Login';
 import {Dashboard} from '../pages/Dashboard';
 import {Users} from '../pages/Users';
+import {AddUser} from '../pages/AddUser';
 
 function CustomRoute({isPrivate, ...rest}) {
     // Verificando se o usuario esta logado
@@ -23,6 +24,7 @@ export default function RoutesAdm() {
             <CustomRoute exact path='/' component={Login} />
             <CustomRoute isPrivate path='/dashboard' component={Dashboard} />
             <CustomRoute isPrivate path='/users' component={Users} />
+            <CustomRoute isPrivate path='/add-user' component={AddUser} />
         </Switch>
     );
 }
