@@ -7,6 +7,7 @@ import {Login} from '../pages/Login';
 import {Dashboard} from '../pages/Dashboard';
 import {Users} from '../pages/Users';
 import {AddUser} from '../pages/AddUser';
+import {ViewUser} from '../pages/ViewUser';
 
 function CustomRoute({isPrivate, ...rest}) {
     // Verificando se o usuario esta logado
@@ -25,6 +26,7 @@ export default function RoutesAdm() {
             <CustomRoute isPrivate path='/dashboard' component={Dashboard} />
             <CustomRoute isPrivate path='/users' component={Users} />
             <CustomRoute isPrivate path='/add-user' component={AddUser} />
+            <CustomRoute isPrivate path='/view-user/:id' component={ViewUser} />
         </Switch>
     );
 }

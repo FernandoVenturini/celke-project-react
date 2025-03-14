@@ -16,7 +16,7 @@ function AuthProvider({children}) {
         const getLogin = async () => {
             const token = localStorage.getItem('token');
 
-            if(token && valUser) {
+            if(token && valUser()) {
                 api.defaults.headers.Authorization = `Bearer ${(token)}`;
                 setAuthenticated(true);
             };
