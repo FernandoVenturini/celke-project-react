@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 import api from '../../config/configApi';
 
@@ -58,7 +58,15 @@ export const AddUser = () => {
             <h1>Cadastrar Usuario</h1>
 
             {status.type === 'error' ? <p>{status.mensagem}</p> : ''}
-            {status.type === 'success' ? <p>{status.mensagem}</p> : ''}
+            {status.type === 'success' ? 
+            <Redirect to={{
+                pathname: '/users',
+                state: {
+                    type: 'success',
+                    mensagem: status.mensagem
+                }
+            }}/>
+            : ''}
 
             <form onSubmit={addUser}>
                 <label>Nome: </label>
