@@ -64,6 +64,7 @@ export function Users() {
                     <span>{user.name}</span><br/>
                     <span>{user.email}</span><br/>
                     <Link to={"/view-user/" + user.id}><button type="button">Visulaizar</button></Link><br/><hr/>
+					<Link to={"/edit-user/" + user.id}><button type="button">Editar</button></Link><br/>
                     <hr/>
                 </div>
             ))}
