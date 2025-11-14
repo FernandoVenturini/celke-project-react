@@ -46,6 +46,34 @@ export function Users() {
         getUsers();
     },[]);
 
+	const deleteUser = async (idUser) => {
+		const headers = {
+			'headers': {
+				'Authorizaztion': "Bearer " + localStorage.getItem('token')
+			}
+		}
+		await api.delte("/user/" + idUser, headers)
+		.then((response) => {
+			setStatus({
+				type: 'success',
+				mensagem: response.data.mensagem
+			});
+			getUsers();
+		}).catch((err) => {
+			if (err.response) {
+				setStatus({
+					type: 'error',
+					mensagem: err.response.data.mensagem
+				})
+			} else {
+				setStatus({
+					type: 'error',
+					mensagem: "Erro: Tente mais tarde!"
+				});
+			}
+		})
+	}
+
     return (
         <>
             <Link to="/dashboard">Dashboard</Link><br/>
@@ -65,6 +93,8 @@ export function Users() {
                     <span>{user.email}</span><br/>
                     <Link to={"/view-user/" + user.id}><button type="button">Visulaizar</button></Link><br/><hr/>
 					<Link to={"/edit-user/" + user.id}><button type="button">Editar</button></Link><br/>
+                    <hr/>
+					<Link to={"/edit-user/" + user.id}><button type="button" onClick={() => deleteUser(user.id)}>Apagar</button></Link><br/>
                     <hr/>
                 </div>
             ))}
